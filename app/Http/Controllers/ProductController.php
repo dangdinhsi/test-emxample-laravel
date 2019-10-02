@@ -8,7 +8,6 @@ class ProductController extends Controller
 {
     public function listProduct(Request $request){
         $index =1;
-
         $listProduct =DB::table('sanpham')->paginate(8);
         if (isset($request->page)) {
             $index = ($request->page-1)*8+1;
