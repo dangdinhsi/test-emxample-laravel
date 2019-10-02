@@ -11,23 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       DB::table('sanpham')->insert([
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-           array('thubmnail'=>'http://file.vforum.vn/hinh/2017/12/bai-van-ta-con-cho-lop-2.jpg','title'=>'Title1','price'=>'1000','discount'=>0.2),
-       ]);
+        $data =[];
+        for($i=1;$i<=30;$i++){
+            $data[]=[
+              'thubmnail'=>'https://thoitrang.biz/wp-content/uploads/2017/05/ao-co-tron6.jpg',
+              'title'=>'San pham '.$i,
+                'price'=>1000,
+                'discount'=>0.2
+            ];
+        }
+       DB::table('sanpham')->insert($data);
     }
 }
